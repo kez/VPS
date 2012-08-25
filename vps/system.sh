@@ -115,6 +115,57 @@ EOF
     invoke-rc.d xinetd restart
     ok 'dropbear installed (Check now your ssh connection before you drop this one).\n'
   fi
+
+
+
+ # EDITS:
+ if ! apt_installed mysql-server; then
+    apt_install mysql-server
+    ok 'mysql installed.\n'
+  fi
+
+  if ! apt_installed git; then
+    apt_install git
+    ok 'git installed.\n'
+  fi
+
+  if ! apt_installed sysbench; then
+    apt_install sysbench
+    ok 'sysbench installed.\n'
+  fi
+
+   if ! apt_installed build-essential; then
+    apt_install build-essential
+    ok 'build-essential installed.\n'
+  fi
+
+
+  if ! apt_installed python; then
+    apt_install python
+    ok 'python installed.\n'
+  fi
+
+  if ! apt_installed tmux; then
+    apt_install tmux
+    ok 'tmux installed.\n'
+  fi
+
+   if ! apt_installed nano; then
+    apt_install nano
+    ok 'nano installed.\n'
+  fi
+
+if ! apt_installed libreadline5-dev; then
+    apt_install libreadline5-dev
+    ok 'libreadline5-dev installed.\n'
+  fi
+
+  if ! apt_installed redis-server; then
+    apt_install redis-server
+    ok 'redis-server installed.\n'
+  fi
+
+
 }
 
 lowendbox() {
