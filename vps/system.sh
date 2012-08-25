@@ -84,7 +84,7 @@ EOF
     if ! confirm 'Confirm your IP only has access via SSH.\n Or set which one(s)' $IPS; then
       IPS=$REPLY
     fi
-    PORT=$((RANDOM+RANDOM%31744+1024))
+    PORT=$(22)
     if ! confirm 'Confirm your ssh port.\n Or set which one' $PORT; then
       PORT=$REPLY
     fi
@@ -95,7 +95,7 @@ service privatessh
   socket_type = stream
   wait = no
   disable = no
-  only_from = $IPS
+  #only_from = $IPS
   user = root
   server = /usr/sbin/dropbear
   server_args = -i -I 600
