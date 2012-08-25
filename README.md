@@ -3,7 +3,7 @@
 ## Overview
 
 This should provide a set of simple shell scripts which may help setting your
-Debian Squeeze VPS.
+Debian Squeeze VPS (with tools for benchmarking).
 
 ## Quick usage
 
